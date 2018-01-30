@@ -1,10 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="KEYWords" contect="小茶一丛，小茶闲舍，茶叶，小罐茶，本真茶，互联网茶品牌，新中式茶馆，对白茶，红茶、乌龙茶、绿茶、黄茶、白茶、普洱茶、黑茶、安全茶、东方美人、太平猴魁、大红袍、西湖龙井、凤凰单丛、福鼎白茶、月光白茶、小青柑、新消费升级、年轻人茶">
+    <meta name="DEscription" contect="国内首个“甄选”概念的茶叶品牌，致力于“为你甄选本真茶”，建立评茶专家团队，选择独树一帜的“甄选”方式，至简人与茶的距离，为消费者解决找茶、辨茶、选茶难题，回归茶叶本真。同时挖掘每款茶的文化个性，使鲜为人知的至真茶人茶事得以传播，升级茶生活。旗下新中式茶馆，小茶闲舍，为广州城文人雅士、商界精英的热点聚集地。">
+    <title>小茶一丛官网|小茶一丛|为你甄选本真茶|小茶闲舍官网</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="../statics/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../statics/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../statics/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../statics/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../statics/css/brand.css" rel="stylesheet" type="text/css" />
+    <script type='text/javascript' src='../statics/js/jquery-2.0.0.js'></script>
+    <script type='text/javascript' src='../statics/js/bootstrap.min.js'></script>
 </head>
+<style>
+    .title{
+        letter-spacing:8px;
+        font-weight: 600;
+        font-size: 23px;
+    }
+
+    .walk_content{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+    }
+
+    .walk_desc{
+        margin: 0;
+        letter-spacing:1px;
+        font-size: 12px;
+    }
+</style>
 <body>
-$END$
+    <img src="../statics/img/top.jpg" class="base_img" id="top"/>
+    <div class="bar" id="bar">
+        <div class="menu" style="width: 15%;" ><a href="story.html">首页</a></div>
+        <div class="line"></div>
+        <div class="menu" style=""><a href="brand.html">品牌介绍</a></div>
+        <div class="line"></div>
+        <div class="menu" style=""><a href="story.html">创始人故事</a></div>
+        <div class="line"></div>
+        <div class="menu" style=""><a href="story.html">甄选茶品</a></div>
+        <div class="line"></div>
+        <div class="menu" style="width: 25%;font-weight: bold"><a href="walk.html">走进体验馆</a></div>
+    </div>
+
+    <div class="content walk_content">
+        <p class="title">小茶一丛线下体验馆</p>
+        <p class="walk_desc">小茶闲舍，位于广州市广州塔下，</p>
+        <p class="walk_desc">视野开阔，轻奢淡雅，静谧休闲，</p>
+        <p class="walk_desc">堪称广州城能解七情六欲、何处万种风情的新中式茶馆，</p>
+        <p class="walk_desc">已然成为广州茶友雅士、商界精英的热点聚集地。</p>
+    </div>
+
+    <img src="../statics/img/walk/desc.jpg" class="base_img" id="desc"/>
+    <img src="../statics/img/walk/qrcode.jpg" class="base_img" id="rqcode"/>
+
 </body>
+
+<script>
+    $("document").ready(function () {
+        var height = document.documentElement.clientHeight;
+        var width = document.documentElement.clientWidth;
+        var topHeight = 378*width/750;
+        var descHeight = 1034*width/750;
+        var rqcodeHeight = 305*width/750;
+
+        $("#top").css("height",topHeight);
+
+        $("#rqcode").css("height",rqcodeHeight);
+
+    });
+</script>
+
 </html>

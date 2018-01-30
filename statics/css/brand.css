@@ -1,0 +1,25 @@
+.content{
+    background-color: #EEEEEE;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.content .msg{
+    background: none;
+    position: absolute;
+    border: 0;
+    left: 20px;
+    top:26px;
+}
+
+
+.content .year_div_2{
+    width: 70%
+}
+
+.content .year_div_1{
+}
+
+.content .year{
+    display: flex;
+}

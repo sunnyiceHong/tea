@@ -12,48 +12,23 @@
     <link href="../statics/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../statics/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../statics/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../statics/css/brand.css" rel="stylesheet" type="text/css" />
     <script type='text/javascript' src='../statics/js/jquery-2.0.0.js'></script>
     <script type='text/javascript' src='../statics/js/bootstrap.min.js'></script>
 </head>
-<style>
-    .content{
-        background-color: #EEEEEE;
-        position: relative;
-        margin-bottom: 10px;
-    }
 
-    .content .msg{
-        background: none;
-        position: absolute;
-        border: 0;
-        left: 20px;
-        top:26px;
-    }
-
-
-    .content .year_div_2{
-        width: 70%
-    }
-
-    .content .year_div_1{
-    }
-
-    .content .year{
-        display: flex;
-    }
-</style>
 <body>
     <img src="../statics/img/top.jpg" class="base_img" id="top"/>
     <div class="bar" id="bar">
-        <div class="menu" style="width: 15%;">首页</div>
+        <div class="menu" style="width: 15%;" ><a href="story.html">首页</a></div>
         <div class="line"></div>
-        <div class="menu" style="font-weight: bold">品牌介绍</div>
+        <div class="menu" style="font-weight: bold"><a href="brand.html">品牌介绍</a></div>
         <div class="line"></div>
-        <div class="menu" style="">创始人故事</div>
+        <div class="menu" style=""><a href="story.html">创始人故事</a></div>
         <div class="line"></div>
-        <div class="menu" style="">甄选茶品</div>
+        <div class="menu" style=""><a href="story.html">甄选茶品</a></div>
         <div class="line"></div>
-        <div class="menu" style="width: 25%">走进体验馆</div>
+        <div class="menu" style="width: 25%"><a href="walk.html">走进体验馆</a></div>
     </div>
 
     <div class="content">
@@ -83,12 +58,11 @@
 
     <div class="content" id="yearContent">
         <div class="msg" id="yearmsg">
-            <div class="year" style="margin-right: 80px;">
+            <div class="year">
                 <div class="year_div_1">2018年1月：</div>
                 <div class="year_div_2">
-                    小茶一丛开启企业定制茶礼项目，
-                    <br/>阿里巴巴、小鹏汽车、中国银行、
-                    <br/>欢聚互娱等进行企业定制合作。<br/>
+                    <p  style="margin-right: 80px;margin-bottom: 0">小茶一丛开启企业定制茶礼项目，
+                    阿里巴巴、小鹏汽车、中国银行、欢聚互娱等进行企业定制合作。</p>
                 </div>
             </div>
             <div class="year">
@@ -137,6 +111,25 @@
         <img src="../statics/img/brand/3.jpg" class="base_img" id="year"/>
     </div>
 
+    <div class="content" id="contactContent">
+        <div class="msg" id="contactmsg">
+            广州市小茶一丛信息科技有限公司<br/>
+            <div class="year" style="margin-right: 60px;">
+                <div class="year_div_1">地址：</div>
+                <div class="year_div_2">广州市海珠区琶洲大道东路2-8号国际采购中心1116室</div>
+            </div>
+            <div class="year">
+                <div class="year_div_1">邮箱：</div>
+                <div class="year_div_2">001@xiaocha360.com</div>
+            </div>
+            <div class="year">
+                <div class="year_div_1">电话：</div>
+                <div class="year_div_2">020-34476755</div>
+            </div>
+            <br/>
+        </div>
+        <img src="../statics/img/brand/4.jpg" class="base_img" id="contact"/>
+    </div>
 
 </body>
     <script>
@@ -147,19 +140,32 @@
             var neihanHeight = 523*width/750;
             var createmsgHeight = 322*width/750;
             var yearHeight = 1044*width/750;
+            var contactHeight = 372*width/750;
 
             $("#top").css("height",topHeight);
 
             $("#neihan").css("height",neihanHeight);
             $("#create").css("height",createmsgHeight);
             $("#year").css("height",yearHeight);
+            $("#contact").css("height",contactHeight);
 
             $("#neihanmsg").css("line-height",neihanHeight*0.007);
             $("#createmsg").css("line-height",createmsgHeight*0.015);
             $("#yearmsg").css("line-height",yearHeight*0.0035);
+            $("#contactmsg").css("line-height",contactHeight*0.011);
 
-            $("#createContent").css("height",$("#createmsg").height()+36+"px")
-            $("#yearContent").css("height",$("#yearmsg").height()+36+"px")
+            if(createmsgHeight < $("#createmsg").height()+26){
+                $("#createContent").css("height",$("#createmsg").height()+36+"px");
+            }
+
+            if(yearHeight < $("#yearmsg").height()+26){
+                $("#yearContent").css("height",$("#yearmsg").height()+36+"px");
+            }
+
+            if(contactHeight < $("#contactmsg").height()+26){
+                $("#contactContent").css("height",$("#contactmsg").height()+16+"px");
+            }
+
         });
     </script>
 </html>
