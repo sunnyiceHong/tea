@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>甄选茶品</title>
+    <link href="../../statics/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../statics/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../statics/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../statics/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="page3.css" rel="stylesheet" type="text/css">
+    <script type='text/javascript' src='../../statics/js/jquery-2.0.0.js'></script>
+    <script type='text/javascript' src='../../statics/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='../../statics/js/vue.js'></script>
+
+</head>
+<body>
+    <img src="../../statics/img/top.jpg" class="base_img" id="top"/>
+    <div class="bar" id="bar">
+        <div class="menu" style="width: 15%;"><a href="">首页</a></div>
+        <div class="line"></div>
+        <div class="menu" style=""><a href="brand.html">品牌介绍</a></div>
+        <div class="line"></div>
+        <div class="menu" style=""><a href="brand.html">创始人故事</a></div>
+        <div class="line"></div>
+        <div class="menu sel" style=""><a href="brand.html">甄选茶品</a></div>
+        <div class="line"></div>
+        <div class="menu" style="width: 25%"><a href="brand.html">走进体验馆</a></div>
+    </div>
+
+    <div id="goodsList">
+        <div v-for="goodType in dataList.typeList">
+            <div class="typeLayout">
+                <div class="title">{{goodType.name}}</div>
+                <pre class="subTitle">{{goodType.desc}}</pre>
+            </div>
+
+            <div v-for="goods in goodType.list" class="goodsLayout">
+                <div class="title" >{{goods.name}}</div>
+                <div class="subTitle">{{goods.desc}}</div>
+                <img  v-for="good in goods.list"  :class="[good.type==1?'flow':'full']"  :src="good.image" v-on:click="onItemClick" >
+
+                </img>
+
+            </div>
+        </div>
+        <img :src="imagePath+'foot.jpg'" class="foot">
+
+    </div>
+
+    <script type="text/javascript">
+        //type 1占半行  2占一行
+        var path = "/tea/statics/img/page3/";
+        var dataList = {
+            typeList:[
+                {
+                    name:"单品茶",
+                    desc:"茶单世界浩繁流深，不妨从甄选而出的它们开始。\n每款茶都有独属的个性，相信你也有",
+                    list:[
+                        {
+                            name:"乌龙茶",
+                            list:[
+                                {
+                                    name:"凤凰单丛",
+                                    price:"108",
+                                    type:1,
+                                    image:path+"tea_fenghuangdancong.jpg"
+                                }
+                                ,
+                                {
+                                    name:"东方美人",
+                                    price:"128",
+                                    type:1,
+                                    image:path+"tea_dongfangmeiren.jpg"
+
+                                }
+                                ,
+                                {
+                                    type:1,
+                                    image:path+"tea_wudongdancong.jpg"
+                                }
+                                ,
+                                {
+                                    type:1,
+                                    image:path+"tea_qingxiangtieguanyin.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            name:"普洱茶",
+                            list:[
+                                {
+                                    type:2,
+                                    image:path+"tea_xiaoqinggan.jpg"
+                                },
+                                {
+                                    type:1,
+                                    image:path+"tea_puershucha.jpg"
+                                },
+                                {
+                                    type:1,
+                                    image:path+"tea_puershengcha.jpg"
+                                }
+                            ]
+                        }
+                        ,{
+                            name:"白茶",
+                            list:[
+                                {
+                                    type:1,
+                                    image:path+"tea_gongmei.jpg"
+                                },
+                                {
+                                    type:1,
+                                    image:path+"tea_yueguangbai.jpg"
+                                }]
+                        }
+                    ]
+
+                },
+                {
+                    name:"茶叶礼盒",
+                    desc:"在有格调与品味的礼盒中,\n“藏”着满满的茶中奥妙，静待收礼之惊喜。",
+                    list:[{
+                        name:"茶叶双罐礼盒",
+                        desc:"一罐为惊喜，一罐是回味",
+                        list:[
+                            {
+                                type:1,
+                                image:path+"tea_fenghuangdancongshuangguanlihe.jpg"
+                            },
+                            {
+                                type:1,
+                                image:path+"tea_wudongdancongshuangguanlihe.jpg"
+                            }
+                            ,
+                            {
+                                type:1,
+                                image:path+"tea_qingxiangtieguanyinshuangguanlihe.jpg"
+                            }
+                            ,
+                            {
+                                type:1,
+                                image:path+"tea_puershuchashuangguanlihe.jpg"
+                            }
+                            ,
+                            {
+                                type:1,
+                                image:path+"tea_gushuhongchashuangguanlihe.jpg"
+                            }
+                            ,
+                            {
+                                type:1,
+                                image:path+"tea_dengmenhongchashuangguanlihe.jpg"
+                            }
+                        ]
+                    } ,
+                        {
+                            name:"茶叶茶具礼盒",
+                            desc:"好茶配好茶具，方能相得益彰",
+                            list:[
+                                {
+                                    type:1,
+                                    image:path+"tea_fenghuangdancongchayechajulihe.jpg"
+                                },
+                                {
+                                    type:1,
+                                    image:path+"tea_puershuchachayechajulihe.jpg"
+                                }
+                                ,
+                                {
+                                    type:1,
+                                    image:path+"tea_wudongdancongchayechajulihe.jpg"
+                                }
+                                ,
+                                {
+                                    type:1,
+                                    image:path+"tea_qingxiangtieguanyinchayechajulihe.jpg"
+                                }
+
+                            ]
+                        },
+                        {
+                            name:"茶叶高端礼盒",
+                            desc:"小茶大承，静水流深",
+                            list:[
+                                {
+                                    type:1,
+                                    image:path+"wuyishandahongpao.jpg"
+                                },
+                                {
+                                    type:1,
+                                    image:path+"chunyajinjunmei.jpg"
+                                },
+                                {
+                                    type:1,
+                                    image:path+"puershucha.jpg"
+                                },
+                                {
+                                    type:1,
+                                    image:path+"wudonglaocongyashixiang.jpg"
+                                },
+                            ]
+
+                        }
+                    ]
+                }
+                ,
+                {
+                    name:"茶叶茶具礼盒",
+                    desc:"总有些茶具，让喝茶讲究也简单",
+                    list:[
+                        {
+                            list:[
+                                {
+                                    type:1,
+                                    image:path+"yuqubei.jpg"
+                                },
+                                {
+                                    type:1,
+                                    image:path+"erbei.jpg"
+                                },
+                                {
+                                    type:2,
+                                    image:path+"hudiebei.jpg"
+                                }
+                            ]
+                        }
+
+
+                    ]
+                }
+
+            ]
+        }
+
+        var vm = new Vue({
+            el:"#goodsList",
+            data:{
+                dataList:dataList,
+                imagePath:path
+            }
+            ,methods:{
+                onItemClick:function () {
+                    window.location.href="https://shop156548874.taobao.com/";
+                }
+
+            }
+
+
+
+        });
+    </script>
+</body>
+
+</html>

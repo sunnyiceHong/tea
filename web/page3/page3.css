@@ -1,0 +1,60 @@
+body{
+    font-size: 0px;
+}
+.typeLayout{
+    background: #ECEBEB;
+    padding: 8px;
+}
+.typeLayout .title{
+    letter-spacing: 15px;
+    font-size: 24px;
+    font-weight:bold;
+    text-align: center;
+}
+.typeLayout .subTitle{
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-align: center;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+.goodsLayout{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.goodsLayout .title{
+    letter-spacing: 15px;
+    margin-top: 23px;
+    font-size: 20px;
+    text-align: center;
+}
+.goodsLayout .subTitle{
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 23px;
+    text-align: center;
+
+}
+.goodsLayout .flow{
+    width: calc((100% - 12px - 12px - 12px)/2);
+    display: inline-block;
+    margin-bottom: 23px;
+    margin-left: 12px;
+}
+.flow.marginLeft{
+    margin-left: 28px;
+}
+.goodsLayout .full{
+    margin-left: 12px;
+    margin-right: 12px;
+    width:calc(100% - 12px - 12px);
+    margin-bottom: 23px;
+
+}
+.foot{
+    width: 100%;
+    padding: 0px;
+}
