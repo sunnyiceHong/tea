@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="KEYWords" contect="小茶一丛，小茶闲舍，茶叶，小罐茶，本真茶，互联网茶品牌，新中式茶馆，对白茶，红茶、乌龙茶、绿茶、黄茶、白茶、普洱茶、黑茶、安全茶、东方美人、太平猴魁、大红袍、西湖龙井、凤凰单丛、福鼎白茶、月光白茶、小青柑、新消费升级、年轻人茶">
+    <meta name="DEscription" contect="国内首个“甄选”概念的茶叶品牌，致力于“为你甄选本真茶”，建立评茶专家团队，选择独树一帜的“甄选”方式，至简人与茶的距离，为消费者解决找茶、辨茶、选茶难题，回归茶叶本真。同时挖掘每款茶的文化个性，使鲜为人知的至真茶人茶事得以传播，升级茶生活。旗下新中式茶馆，小茶闲舍，为广州城文人雅士、商界精英的热点聚集地。">
+    <title>小茶一丛官网|小茶一丛|为你甄选本真茶|小茶闲舍官网</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="../statics/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../statics/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../statics/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../statics/css/main.css" rel="stylesheet" type="text/css" />
+    <script type='text/javascript' src='../statics/js/jquery-2.0.0.js'></script>
+    <script type='text/javascript' src='../statics/js/bootstrap.min.js'></script>
+</head>
+
+<body>
+    <img src="../statics/img/top.jpg" class="base_img" id="top"/>
+    <div class="bar" id="bar">
+        <div class="menu" style="width: 15%;font-weight: bold"><a href="">首页</a></div>
+        <div class="line"></div>
+        <div class="menu" style=""><a href="brand.html">品牌介绍</a></div>
+        <div class="line"></div>
+        <div class="menu" style=""><a href="brand.html">创始人故事</a></div>
+        <div class="line"></div>
+        <div class="menu" style=""><a href="brand.html">甄选茶品</a></div>
+        <div class="line"></div>
+        <div class="menu" style="width: 25%"><a href="brand.html">走进体验馆</a></div>
+    </div>
+
+    <div class="first_content">
+        <p class="myp" id="firstMsg">
+            <span>小茶一丛</span>为国内首个“甄选”概念的茶叶品牌，
+            致力于“为你甄选本真茶”，建立评茶专家团队，
+            选择独树一帜的“甄选”方式，至简人与茶的距离，
+            为消费者解决找茶、辨茶、选茶难题，回归茶叶本真。
+            同时挖掘每款茶的文化个性，使鲜为人知的,
+            至真茶人茶事得以传播，升级茶生活。
+        </p>
+        <img src="../statics/img/main/1.jpg" class="base_img" id="firstImg">
+    </div>
+    <div class="second_content">
+        <div class="my_div">
+            <p style="margin:0 ;" id="secondMsg">建立专业评茶专家团队<br/>
+            历经103218公里<br/>
+            遍选全国各大茶区<br/>
+            考察476个茶园<br/>
+            拜访619位茶农<br/>
+            评测2000多个茶样</p>
+        </div>
+        <img src="../statics/img/main/2.jpg" class="base_img" id="secondImg">
+    </div>
+
+    <img src="../statics/img/main/qrcode.jpg" class="base_img">
+
+    <div class="blog">
+        <img src="../statics/img/main/temp.jpg" class="blog_img">
+        <div class="date" name="mon">
+            <p class="day">11</p>
+            <p class="mon">10月</p>
+        </div>
+        <div class="msg">
+            <a>admin</a>&nbsp;&nbsp;分类&nbsp;<a>小茶</a>
+        </div>
+        <p class="title">易错的十条茶知识，你知道吗？</p>
+        <div class="line"></div>
+        <p class="content" id="content">
+
+        </p>
+    </div>
+
+    <div class="foot">
+        <p class="msg">2015-2018 广州小茶一丛信息科技有限公司 版权所有</p>
+        <p class="msg">粤ICP备16008366号</p>
+        <p class="msg">Copyright © 2015-2018 Guangzhou xiaocha360 IT Co LTD All Rights Reserved</p>
+    </div>
+
+</body>
+<script>
+    $("document").ready(function () {
+        var height = document.documentElement.clientHeight;
+        var width = document.documentElement.clientWidth;
+        var topHeight = 378*width/750;
+        var barHeight = 93*width/471;
+        var imgHeight = 495*width/750;
+        var imgHeight2= 404*width/750;
+        $("#top").css("height",topHeight);
+//        $("#bar").css("height",barHeight);
+        $("#firstImg").css("height",imgHeight);
+        $("#firstMsg").css("line-height",imgHeight*0.007);
+        $("#secondImg").css("height",imgHeight2);
+        $("#secondMsg").css("line-height",imgHeight*0.007);
+
+        var str = "想了解更多茶叶知识，关注微信公众号“小茶一丛”中国的茶文化博大精深，不经过纪念的苦学静静，很难成为高手。一些";
+        function processStr(str,n)
+        {
+            var l = str.length;
+            if(l<=n) return str;
+            return str.slice(0,n)+"...";
+        }
+        $("#content").html(processStr(str,30));
+    });
+
+
+</script>
+</html>

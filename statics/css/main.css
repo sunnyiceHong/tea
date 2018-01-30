@@ -1,0 +1,157 @@
+a{
+    color: #985f0d;
+}
+a:link {
+    color: #985f0d;
+    text-decoration: none;
+}
+a:visited {
+    color: #985f0d;
+    text-decoration: none;
+}
+a:hover {
+    color: #985f0d;
+    text-decoration: none;
+}
+
+.bar a{
+    color: #ffffff;
+}
+.bar a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+.bar a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+.bar a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.base_img{
+    width: 100%;
+}
+
+.first_content{
+    position: relative;
+    margin-top: 30px;
+}
+
+.first_content .myp{
+    margin: 0 20px;
+    position: absolute;
+    top: 0;
+    width: 75%;
+    font-weight: 500;
+}
+
+.first_content .myp span{
+    margin: 0;
+    font-weight: 800
+}
+
+.second_content{
+    position: relative;
+}
+
+.second_content .my_div{
+    margin: 20px 20px;
+    position: absolute;
+    top: 3%;
+    width: 75%;
+    font-weight: bold;
+}
+
+.blog{
+    padding: 10px;
+    margin: 20px 20px;
+    position: relative;
+    border: 1px solid #f5f5f5;
+    -webkit-box-shadow: 1px 3px 3px #f5f5f5;
+}
+
+.blog .blog_img{
+    width: 100%;
+    height: 150px;
+}
+
+.blog .date{
+    background-color: rgba(42,171,210,0.7);
+    position:absolute;
+    top:10px;
+    left: 10px;
+    color: white;
+    width:15%;
+    height:50px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.blog .date .day{
+    margin: 0;
+    font-size: 18px;
+}
+
+.blog .date .mon{
+    margin: 0;
+    font-size: 8px
+}
+
+.blog .msg{
+    background-color: #f5f5f5;
+    margin-top: 3px;
+    color: #5e5e5e;
+    font-weight: 600;
+    padding: 10px 10px;
+}
+
+.blog .title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.blog .line{
+    border-bottom: 2px solid #d58512;
+    width: 15%
+}
+
+.blog .content{
+    font-size: 8px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.foot{
+    background-color:gainsboro;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.foot .msg{
+    font-size: 8px;
+    margin: 0
+}
+
+.bar{
+    width: 100%;
+    background-color: #527C78;
+    color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    text-align: center;
+    font-weight: lighter;
+}
+.bar .menu{
+    width: 20%;
+}
+
+.bar .line{
+    border-right: 1px solid #ffffff;
+    height: 20px;
+    margin-top: 15px;
+}
