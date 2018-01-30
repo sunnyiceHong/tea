@@ -140,18 +140,25 @@ a:hover {
     width: 100%;
     background-color: #527C78;
     color: #ffffff;
-    height: 50px;
-    line-height: 50px;
+    height: 35px;
+    line-height: 35px;
     display: flex;
     text-align: center;
     font-weight: lighter;
+    font-size: 12px;
 }
 .bar .menu{
     width: 20%;
 }
+.bar .menu.sel{
+    font-weight: bold;
+}
 
 .bar .line{
-    border-right: 1px solid #ffffff;
-    height: 20px;
-    margin-top: 15px;
+    width:1px;
+    height: 50%;
+    background: white;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
 }
